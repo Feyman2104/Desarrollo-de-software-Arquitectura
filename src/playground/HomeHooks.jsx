@@ -55,59 +55,87 @@ function HomeHooks() {
   ];
 
   return (
-    <div style={{ padding: "30px" }}>
+    <div className="p-8 max-w-6xl mx-auto">
 
-      <h1 style={{ textAlign: "center" }}>
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
         Ejemplos de Hooks en React
       </h1>
 
-      <table border="1" width="100%" style={{ marginTop: "20px" }}>
+      <div className="overflow-x-auto shadow-lg rounded-lg">
+        <table className="w-full border-collapse bg-white dark:bg-gray-800">
 
-        <thead style={{ background: "#1f2937", color: "white" }}>
-          <tr>
-            <th>Hook</th>
-            <th>Ruta</th>
-            <th>Descripción</th>
-            <th>Categoría</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {hooks.map((hook, index) => (
-            <tr key={index}>
-
-              <td><b>{hook.nombre}</b></td>
-
-              <td>
-                <Link to={hook.ruta}>
-                  <button>Ir a ejemplo</button>
-                </Link>
-              </td>
-
-              <td>{hook.descripcion}</td>
-
-              <td>{hook.categoria}</td>
-
+          <thead className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+            <tr>
+              <th className="px-6 py-4 text-left font-semibold">Hook</th>
+              <th className="px-6 py-4 text-left font-semibold">Ruta</th>
+              <th className="px-6 py-4 text-left font-semibold">Descripción</th>
+              <th className="px-6 py-4 text-left font-semibold">Categoría</th>
             </tr>
-          ))}
-        </tbody>
+          </thead>
 
-      </table>
+          <tbody>
+            {hooks.map((hook, index) => (
+              <tr key={index} className="border-b hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
 
-      <div style={{ marginTop: "30px" }}>
+                <td className="px-6 py-4 font-bold text-gray-900 dark:text-white">{hook.nombre}</td>
 
-        <h3>Categorías y Hooks oficiales (React 19)</h3>
+                <td className="px-6 py-4">
+                  <Link to={hook.ruta}>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 transform hover:scale-105">
+                      Ir a ejemplo
+                    </button>
+                  </Link>
+                </td>
 
-        <ul>
-          <li><b>Debug:</b> useDebugValue</li>
-          <li><b>Estado:</b> useState, useReducer</li>
-          <li><b>Referencias:</b> useRef, useImperativeHandle</li>
-          <li><b>Performance:</b> useMemo, useCallback, useTransition</li>
-          <li><b>Efectos / ciclo de vida:</b> useEffect, useLayoutEffect</li>
-          <li><b>Contexto:</b> useContext</li>
+                <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{hook.descripcion}</td>
+
+                <td className="px-6 py-4">
+                  <span className="inline-block bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">
+                    {hook.categoria}
+                  </span>
+                </td>
+
+              </tr>
+            ))}
+          </tbody>
+
+        </table>
+      </div>
+
+      <div className="mt-12 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
+
+        <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
+          Categorías y Hooks oficiales (React 19)
+        </h3>
+
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start">
+            <span className="font-semibold text-purple-600 dark:text-purple-400 mr-2">Debug:</span>
+            <span className="text-gray-700 dark:text-gray-300">useDebugValue</span>
+          </li>
+          <li className="flex items-start">
+            <span className="font-semibold text-green-600 dark:text-green-400 mr-2">Estado:</span>
+            <span className="text-gray-700 dark:text-gray-300">useState, useReducer</span>
+          </li>
+          <li className="flex items-start">
+            <span className="font-semibold text-blue-600 dark:text-blue-400 mr-2">Referencias:</span>
+            <span className="text-gray-700 dark:text-gray-300">useRef, useImperativeHandle</span>
+          </li>
+          <li className="flex items-start">
+            <span className="font-semibold text-yellow-600 dark:text-yellow-400 mr-2">Performance:</span>
+            <span className="text-gray-700 dark:text-gray-300">useMemo, useCallback, useTransition</span>
+          </li>
+          <li className="flex items-start">
+            <span className="font-semibold text-red-600 dark:text-red-400 mr-2">Efectos / ciclo de vida:</span>
+            <span className="text-gray-700 dark:text-gray-300">useEffect, useLayoutEffect</span>
+          </li>
+          <li className="flex items-start">
+            <span className="font-semibold text-indigo-600 dark:text-indigo-400 mr-2">Contexto:</span>
+            <span className="text-gray-700 dark:text-gray-300">useContext</span>
+          </li>
         </ul>
 
-        <p>
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           En React existen varios hooks oficiales que permiten manejar estado,
           efectos, rendimiento y comunicación entre componentes.
         </p>
