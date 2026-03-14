@@ -57,7 +57,7 @@ function HomeHooks() {
   return (
     <div className="p-8 max-w-6xl mx-auto">
 
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-black">
         Ejemplos de Hooks en React
       </h1>
 
@@ -102,45 +102,7 @@ function HomeHooks() {
         </table>
       </div>
 
-      <div className="mt-12 bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-md">
 
-        <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
-          Categorías y Hooks oficiales (React 19)
-        </h3>
-
-        <ul className="space-y-3 mb-6">
-          <li className="flex items-start">
-            <span className="font-semibold text-purple-600 dark:text-purple-400 mr-2">Debug:</span>
-            <span className="text-gray-700 dark:text-gray-300">useDebugValue</span>
-          </li>
-          <li className="flex items-start">
-            <span className="font-semibold text-green-600 dark:text-green-400 mr-2">Estado:</span>
-            <span className="text-gray-700 dark:text-gray-300">useState, useReducer</span>
-          </li>
-          <li className="flex items-start">
-            <span className="font-semibold text-blue-600 dark:text-blue-400 mr-2">Referencias:</span>
-            <span className="text-gray-700 dark:text-gray-300">useRef, useImperativeHandle</span>
-          </li>
-          <li className="flex items-start">
-            <span className="font-semibold text-yellow-600 dark:text-yellow-400 mr-2">Performance:</span>
-            <span className="text-gray-700 dark:text-gray-300">useMemo, useCallback, useTransition</span>
-          </li>
-          <li className="flex items-start">
-            <span className="font-semibold text-red-600 dark:text-red-400 mr-2">Efectos / ciclo de vida:</span>
-            <span className="text-gray-700 dark:text-gray-300">useEffect, useLayoutEffect</span>
-          </li>
-          <li className="flex items-start">
-            <span className="font-semibold text-indigo-600 dark:text-indigo-400 mr-2">Contexto:</span>
-            <span className="text-gray-700 dark:text-gray-300">useContext</span>
-          </li>
-        </ul>
-
-        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-          En React existen varios hooks oficiales que permiten manejar estado,
-          efectos, rendimiento y comunicación entre componentes.
-        </p>
-
-      </div>
 
     </div>
   );
